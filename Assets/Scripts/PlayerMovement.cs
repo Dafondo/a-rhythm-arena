@@ -12,30 +12,52 @@ public class PlayerMovement : MonoBehaviour {
     private int currY = 0;
     private float timeElapsed = 0.0f;
 
+    private float lastBeat;
+    public float bpm;
+    public float beat;
+    public GameObject conductorObject;
+    private MusicManager conductor;
+
 	// Use this for initialization
 	void Start () {
-		
-	}
+        conductor = conductorObject.GetComponent<MusicManager>();
+        lastBeat = 0;
+        bpm = conductor.bpm;
+        beat = 60 / bpm;
+    }
 	
 	// Update is called once per frame
 	void Update () {
         readInput();
-        
-	}
-
-    void FixedUpdate() {
-        if (timeElapsed >= 0.5)
+        //Debug.Log("Song pos: " + conductor.songposition);
+        //Debug.Log("lastBeat: " + lastBeat);
+        //Debug.Log("beat: " + beat);
+        if (conductor.songposition > lastBeat + beat)
         {
             move();
-            timeElapsed = 0;
-        }
-        else
-        {
-            timeElapsed += Time.fixedDeltaTime;
+            lastBeat += beat;
         }
     }
 
-    void readInput() {
+    void FixedUpdate() {
+        //if (conductor.songposition > lastBeat + beat)
+        //{
+        //    Debug.Log("move");
+        //    move();
+        //    lastBeat += beat;
+        //}
+        //    if (timeElapsed >= 0.5)
+        //    {
+        //        move();
+        //        timeElapsed = 0;
+        //    }
+        //    else
+        //    {
+        //        timeElapsed += Time.fixedDeltaTime;
+        //    }
+    }
+
+        void readInput() {
         if (Input.GetButtonDown("Up")) {
             direction = Direction.N;
         }
