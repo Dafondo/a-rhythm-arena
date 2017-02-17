@@ -1,5 +1,7 @@
 ## TODO
-- Figure out how to implement music/track manager class and do it
-- Sync game objects to track pos
+- Character Design
+- Figure out best sprite size and Unity coordinates
 - SPRITES
+- Maps and best way to store them
+- Menu system
 - Other stufffffff
