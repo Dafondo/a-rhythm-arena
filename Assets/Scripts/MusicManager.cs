@@ -31,7 +31,7 @@ public class MusicManager : MonoBehaviour {
         audio = GetComponent<AudioSource>();
         audio.clip = song;
         audio.Play();
-        dspTimeStart = (float)AudioSettings.dspTime + 0.2f;
+        dspTimeStart = (float)AudioSettings.dspTime + trackOffset;// 0.2f;
 	}
 	
 	void Update () {

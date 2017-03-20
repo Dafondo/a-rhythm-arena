@@ -7,7 +7,13 @@ public class GameManagerScript : MonoBehaviour {
 	public GameObject groundTile;
     public GameObject wallTile;
     private int[][] blankMap = { new int[] { 0, 0, 0 }, new int[] { 0, 0, 0 }, new int[] { 0, 0, 0 } };
-    private int[][] testMap1 = { new int[] { 0, 1, 0 }, new int[] { 0, 1, 0 }, new int[] { 0, 0, 0 } };
+	private int[][] testMap1 = { 
+		new int[] { 0, 0, 0, 0, 0 }, 
+		new int[] { 0, 0, 1, 0, 0 }, 
+		new int[] { 0, 1, 1, 1, 0 }, 
+		new int[] { 0, 0, 1, 0, 0 }, 
+		new int[] { 0, 0, 0, 0, 0 } 
+	};
 
     // Use this for initialization
     void Start () {

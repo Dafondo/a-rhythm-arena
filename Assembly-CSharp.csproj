@@ -46,16 +46,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AttackEnd.cs" />
+     <Compile Include="Assets\Scripts\AttackEnd.cs" />
      <Compile Include="Assets\Scripts\FistScript.cs" />
      <Compile Include="Assets\Scripts\GameManagerScript.cs" />
      <Compile Include="Assets\Scripts\Grid.cs" />
      <Compile Include="Assets\Scripts\GroundTile.cs" />
      <Compile Include="Assets\Scripts\MusicManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\SpriteMovement.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />
      <Compile Include="Assets\Scripts\TileImpl.cs" />
-     <Compile Include="Assets\SpriteMovement.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
